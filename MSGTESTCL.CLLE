@@ -1,0 +1,14 @@
+/* Prostota programu CLLE na IBM i - wyświetla komunikat */                         */ 
+PGM                                                         
+                                                            
+/* Zmienne programu */                                      
+DCL VAR(&MSG) TYPE(*CHAR) LEN(50)                           
+                                                            
+/* Przypisanie wartości do zmiennej */                      
+CHGVAR VAR(&MSG) VALUE('Witaj w świecie IBM i!')            
+                                                            
+/* Wyświetlenie komunikatu */                               
+SNDPGMMSG MSG(&MSG) MSGTYPE(*INFO)                          
+                                                            
+/* Zakończenie programu */                                  
+ENDPGM                                                      
